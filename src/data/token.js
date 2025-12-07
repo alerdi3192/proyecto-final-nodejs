@@ -3,7 +3,6 @@ import 'dotenv/config';
 
 
 const secret_key = process.env.JWT_SECRET_KEY || "saldkj289sad21ml";
-console.log(secret_key)
 
 export const generateToken = (userData) => {
   const user = {id: userData.id, email: userData.email};
@@ -12,6 +11,6 @@ export const generateToken = (userData) => {
   return jwt.sign(user, secret_key, expiration);
 }
 
-const token = generateToken({id: "1", email:"test@gmail.com"})
+//const token = generateToken({id: "1", email:"test@gmail.com"})
 
-console.log("token:", token)
+//console.log("token:", token)

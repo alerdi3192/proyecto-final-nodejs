@@ -2,7 +2,6 @@ import * as productService from "../services/products.services.js";
 
 export const getAllProducts = async (req, res) => {
     try{
-        console.log("paso 1")
         const products = await productService.getAllProductsService()
         console.log(products)
         res.status(200).json(products);
